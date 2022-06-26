@@ -22,7 +22,7 @@ mapblock_tileset.register_tileset("street", {
             rotations = {0}
         },{
             -- straight
-            positions = {{x=2,y=0,z=0}},
+            positions = {{x=2,y=0,z=0},{x=2,y=0,z=1}},
             rules = {
                 ["1,0,0"] = { groups = {"street"} },
                 ["-1,0,0"] = { groups = {"street"} }
