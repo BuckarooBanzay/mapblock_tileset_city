@@ -5,6 +5,9 @@ mapblock_tileset.register_tileset("street", {
     groups = {
         street = true
     },
+    disable_orientation = {
+        ["moreblocks:iron_stone_bricks"] = true
+    },
     tiles = {
         {
             -- all sides
