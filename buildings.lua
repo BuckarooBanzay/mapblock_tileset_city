@@ -64,7 +64,7 @@ local function building_tiles(opts)
             rotations = {0}
         },{
         -- top section
-        positions = {{x=0,y=2,z=0}},
+            positions = {{x=0,y=2,z=0}},
             rules = {
                 ["1,0,0"] = { groups = {opts.group} },
                 ["0,0,1"] = { groups = {opts.group} },
