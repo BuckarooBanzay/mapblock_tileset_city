@@ -45,13 +45,25 @@ mapblock_tileset.register_tileset("street", {
                 ["0,0,1"] = { groups = {"street"} }
             },
             rotations = {0,90,180,270}
-        },{
+        }
+    }
+})
+
+mapblock_tileset.register_tileset("street_slope", {
+    catalog = MP .. "/schematics/street.zip",
+    groups = {
+        street_slope = true,
+        street = true
+    },
+    tiles = {
+        {
             -- lower slope
             positions = {{x=0,y=0,z=0}},
             rules = {
                 ["1,0,0"] = { groups = {"street"} },
                 ["-1,1,0"] = { groups = {"street"} }
             },
+            fallback = true,
             rotations = {0,90,180,270}
         },{
             -- upper slope
