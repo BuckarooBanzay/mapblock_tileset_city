@@ -100,8 +100,35 @@ local function building_tiles(opts)
             rules = {
                 ["0,1,0"] = opts.tilename,
                 ["0,0,1"] = opts.tilename,
+                ["0,0,-1"] = opts.tilename,
                 ["1,0,0"] = opts.tilename,
-                ["-1,0,-1"] = { not_groups = {opts.group} }
+                ["-1,0,0"] = opts.tilename,
+                ["-1,0,-1"] = { not_tilename = opts.tilename }
+            },
+            rotations = {0,90,180,270}
+        })
+        table.insert(tiles, {
+            positions = {{x=0,y=1,z=1}},
+            rules = {
+                ["0,1,0"] = opts.tilename,
+                ["0,-1,0"] = opts.tilename,
+                ["0,0,1"] = opts.tilename,
+                ["0,0,-1"] = opts.tilename,
+                ["1,0,0"] = opts.tilename,
+                ["-1,0,0"] = opts.tilename,
+                ["-1,0,-1"] = { not_tilename = opts.tilename }
+            },
+            rotations = {0,90,180,270}
+        })
+        table.insert(tiles, {
+            positions = {{x=0,y=2,z=1}},
+            rules = {
+                ["0,-1,0"] = opts.tilename,
+                ["0,0,1"] = opts.tilename,
+                ["0,0,-1"] = opts.tilename,
+                ["1,0,0"] = opts.tilename,
+                ["-1,0,0"] = opts.tilename,
+                ["-1,0,-1"] = { not_tilename = opts.tilename }
             },
             rotations = {0,90,180,270}
         })
@@ -113,14 +140,16 @@ end
 mapblock_tileset.register_tileset("building1", {
     catalog = MP .. "/schematics/building1.zip",
     tiles = building_tiles({
-        tilename = "building1"
+        tilename = "building1",
+        inner_corner = true
     })
 })
 
 mapblock_tileset.register_tileset("building1_1", {
     catalog = MP .. "/schematics/building1.zip",
     tiles = building_tiles({
-        tilename = "building1_1"
+        tilename = "building1_1",
+        inner_corner = true
     }),
     replace = {
         ["moreblocks:coal_stone"] = "moreblocks:iron_stone",
