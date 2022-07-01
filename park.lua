@@ -11,7 +11,7 @@ mapblock_tileset.register_tileset("park", {
     tiles = {
         {
             -- all sides
-            positions = {{x=2,y=0,z=0}},
+            positions = {{x=2,y=0,z=0},{x=3,y=0,z=0},{x=4,y=0,z=0},{x=5,y=0,z=0},{x=6,y=0,z=0}},
             rules = {
                 ["1,0,0"] = { groups = {"park"} },
                 ["-1,0,0"] = { groups = {"park"} },
