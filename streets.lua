@@ -22,7 +22,7 @@ mapblock_tileset.register_tileset("street", {
             rotations = {0}
         },{
             -- straight
-            positions = {{x=2,y=0,z=0},{x=2,y=0,z=1}},
+            positions = {{x=2,y=0,z=0}},
             rules = {
                 ["1,0,0"] = { groups = {"street"} },
                 ["-1,0,0"] = { groups = {"street"} }
@@ -73,6 +73,48 @@ mapblock_tileset.register_tileset("street_slope", {
                 ["-1,0,0"] = { groups = {"street"} }
             },
             rotations = {0,90,180,270}
+        }
+    }
+})
+
+mapblock_tileset.register_tileset("street_crossing", {
+    catalog = MP .. "/schematics/street.zip",
+    groups = {
+        street = true
+    },
+    disable_orientation = {
+        ["moreblocks:iron_stone_bricks"] = true
+    },
+    tiles = {
+        {
+            positions = {{x=2,y=0,z=1}},
+            rules = {
+                ["1,0,0"] = { groups = {"street"} },
+                ["-1,0,0"] = { groups = {"street"} }
+            },
+            fallback = true,
+            rotations = {0,90}
+        }
+    }
+})
+
+mapblock_tileset.register_tileset("street_tunnel", {
+    catalog = MP .. "/schematics/street.zip",
+    groups = {
+        street = true
+    },
+    disable_orientation = {
+        ["moreblocks:iron_stone_bricks"] = true
+    },
+    tiles = {
+        {
+            positions = {{x=2,y=0,z=2}},
+            rules = {
+                ["1,0,0"] = { groups = {"street"} },
+                ["-1,0,0"] = { groups = {"street"} }
+            },
+            fallback = true,
+            rotations = {0,90}
         }
     }
 })
