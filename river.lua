@@ -2,6 +2,9 @@ local MP = minetest.get_modpath(minetest.get_current_modname())
 
 mapblock_tileset.register_tileset("river", {
     catalog = MP .. "/schematics/river.zip",
+    groups = {
+        full_water = true
+    },
     disable_orientation = {
         ["moreblocks:iron_stone_bricks"] = true
     },
