@@ -57,3 +57,19 @@ mapblock_tileset.register_tileset("courtyard_fountain", {
         }
     }
 })
+
+mapblock_tileset.register_tileset("courtyard_pattern_1", {
+    catalog = MP .. "/schematics/courtyard.zip",
+    groups = {
+        courtyard = true
+    },
+    category = "courtyard",
+    tiles = {
+        {
+            positions = {{x=2,y=0,z=2}},
+            fallback = true,
+            rules = {},
+            rotations = {0}
+        }
+    }
+})
