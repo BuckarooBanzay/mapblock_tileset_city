@@ -1,4 +1,8 @@
 
+globals = {
+	"mapblock_tileset_city"
+}
+
 read_globals = {
 	-- Stdlib
 	string = {fields = {"split", "trim"}},
@@ -12,5 +16,6 @@ read_globals = {
 	"vector",
 
 	-- deps
-	"mapblock_tileset"
+	"mapblock_tileset",
+	"mapblock_lib"
 }

@@ -1,13 +1,32 @@
 local MP = minetest.get_modpath(minetest.get_current_modname())
 
+local has_street_signs_mod = minetest.get_modpath("street_signs")
+
+local content_street_sign = -1
+if has_street_signs_mod then
+	content_street_sign = minetest.get_content_id("street_signs:sign_basic")
+end
+
 mapblock_tileset.register_tileset("street", {
     catalog = MP .. "/schematics/street.zip",
     groups = {
         street = true
     },
     disable_orientation = {
-        ["moreblocks:iron_stone_bricks"] = true
+        ["moreblocks:iron_stone_bricks"] = true,
+        ["street_signs:sign_basic"] = true
     },
+    on_metadata = function(pos, content_id, meta)
+        if content_id == content_street_sign then
+            -- write street name
+            local mapblock_pos = mapblock_lib.get_mapblock(pos)
+            local z_streetname = mapblock_tileset_city.get_street_name(mapblock_pos.x)
+            local x_streetname = mapblock_tileset_city.get_street_name(mapblock_pos.z + 2048)
+            local txt = z_streetname .. "\n" .. x_streetname
+            meta:set_string("infotext", txt)
+            meta:set_string("text", txt)
+        end
+    end,
     tiles = {
         {
             -- all sides

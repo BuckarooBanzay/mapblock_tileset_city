@@ -1,6 +1,8 @@
 
+mapblock_tileset_city = {}
 
 local MP = minetest.get_modpath(minetest.get_current_modname())
+dofile(MP .. "/util/streetname.lua")
 dofile(MP .. "/buildings.lua")
 dofile(MP .. "/streets.lua")
 dofile(MP .. "/river.lua")
