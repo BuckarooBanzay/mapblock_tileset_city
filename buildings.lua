@@ -163,6 +163,7 @@ mapblock_tileset.register_tileset("building1_1", {
 
 mapblock_tileset.register_tileset("building2", {
     catalog = MP .. "/schematics/building2.zip",
+    category = "buildings",
     tiles = building_tiles({
         tilename = "building2"
     })
@@ -170,6 +171,7 @@ mapblock_tileset.register_tileset("building2", {
 
 mapblock_tileset.register_tileset("building2_1", {
     catalog = MP .. "/schematics/building2.zip",
+    category = "buildings",
     tiles = building_tiles({
         tilename = "building2_1"
     }),
@@ -185,6 +187,7 @@ mapblock_tileset.register_tileset("building2_1", {
 
 mapblock_tileset.register_tileset("building2_2", {
     catalog = MP .. "/schematics/building2.zip",
+    category = "buildings",
     tiles = building_tiles({
         tilename = "building2_2"
     }),
@@ -199,6 +202,7 @@ mapblock_tileset.register_tileset("building2_2", {
 
 mapblock_tileset.register_tileset("building2_3", {
     catalog = MP .. "/schematics/building2.zip",
+    category = "buildings",
     tiles = building_tiles({
         tilename = "building2_3"
     }),
@@ -212,6 +216,7 @@ mapblock_tileset.register_tileset("building2_3", {
 
 mapblock_tileset.register_tileset("building3", {
     catalog = MP .. "/schematics/building3.zip",
+    category = "buildings",
     tiles = building_tiles({
         tilename = "building3"
     })
@@ -219,6 +224,7 @@ mapblock_tileset.register_tileset("building3", {
 
 mapblock_tileset.register_tileset("building3_1", {
     catalog = MP .. "/schematics/building3.zip",
+    category = "buildings",
     tiles = building_tiles({
         tilename = "building3_1"
     }),
