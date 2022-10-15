@@ -20,8 +20,8 @@ mapblock_tileset.register_tileset("street", {
         if content_id == content_street_sign then
             -- write street name
             local mapblock_pos = mapblock_lib.get_mapblock(pos)
-            local z_streetname = mapblock_tileset_city.get_street_name(mapblock_pos.x)
-            local x_streetname = mapblock_tileset_city.get_street_name(mapblock_pos.z + 2048)
+            local z_streetname = mapblock_tileset_city.get_street_name(mapblock_pos.x * 3)
+            local x_streetname = mapblock_tileset_city.get_street_name((mapblock_pos.z * 3) + 2048)
             local txt = z_streetname .. "\n" .. x_streetname
             meta:set_string("infotext", txt)
             meta:set_string("text", txt)
